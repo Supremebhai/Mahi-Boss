@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mahi Boss Landing</title>
+<style>
+body {
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:url('stadium_bg.jpg') no-repeat center/cover;
+  height:100vh;
+}
+.overlay {
+  background:rgba(0,0,0,0.45);
+  width:100%;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.card {
+  width:360px;
+  background:rgba(0,0,0,0.55);
+  padding:22px;
+  border-radius:22px;
+  text-align:center;
+  color:white;
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);
+}
+.card h2 { margin:0 0 12px 0; font-size:28px; font-weight:bold; }
+#timer { font-size:42px; margin:6px 0; color:#00ffb3; font-weight:bold; }
+.logo {
+  width:155px;
+  height:155px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-top:10px;
+  box-shadow:0 0 30px rgba(255,215,0,1);
+  border:6px solid rgba(255,255,255,0.08);
+}
+.mycount {
+  margin-top:14px;
+  font-size:32px;
+  font-weight:bold;
+  color:#00eaff;
+}
+.btn {
+  display:inline-block;
+  padding:14px 22px;
+  margin-top:18px;
+  background:#007bff;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  box-shadow:0 0 18px rgba(255,255,255,0.12);
+  border:2px solid rgba(255,255,255,0.9);
+}
+.bottom { margin-top:18px; font-size:14px; color:#fff; background:transparent; }
+</style>
+<script>
+let sec = 58;
+function startTimer(){
+  setInterval(()=>{
+    sec--;
+    if(sec < 0) sec = 58;
+    document.getElementById("timer").innerText = "00:" + (sec<10 ? "0"+sec : sec);
+  },1000);
+}
+window.onload = startTimer;
+</script>
+</head>
+<body>
+<div class="overlay">
+  <div class="card">
+    <h2>👑 MAHI BOSS 👑</h2>
+    <img src="mahi_dp.jpg" class="logo">
+    <div class="mycount">00:58</div>
+    <div class="stat" style="margin-top:15px; font-size:14px; color:#ffd24d;">
+      IPL 60/55 Match / TOSS 🪙
+    </div>
+    <div class="stat" style="font-size:14px; color:#ffd24d;">Big Bash League 38/26 Pass</div>
+    <div class="stat" style="font-size:14px; color:#ffd24d;">Women IPL 40/39 Pass</div>
+    <a class="btn" href="https://t.me/+rd43geH1YSs2MzVl" target="_blank">JOIN THE CHANNEL NOW</a>
+    <div class="bottom">Thanks for visit</div>
+  </div>
+</div>
+</body>
+</html>
